@@ -1,0 +1,65 @@
+@import '../../../styles/global.scss';
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+
+    h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        color: $primary-color;
+    }
+
+    .tour-list {
+        display: grid;
+        gap: 1.5rem;
+    }
+
+    .tour-card {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 1rem;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+        h3 {
+            margin-top: 0;
+            color: $accent-color;
+        }
+
+        p {
+            margin: 0.5rem 0;
+            font-size: 14px;
+        }
+
+        .actions {
+            margin-top: 1rem;
+
+            button {
+                margin-right: 0.5rem;
+                padding: 0.5rem 1rem;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 14px;
+
+                &.edit-btn {
+                    background-color: $primary-color;
+                    color: white;
+                }
+
+                &.delete-btn {
+                    background-color: $warn-color;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .error {
+        color: $warn-color;
+        text-align: center;
+        margin-top: 1rem;
+    }
+}

@@ -1,0 +1,94 @@
+@import '../../../styles/global.scss';
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+#form {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa; 
+  padding: 20px;
+}
+
+#newTourForm {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  padding: 30px 40px;
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+#newTourForm h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $primary-color;
+}
+
+#newTourForm label {
+  font-weight: 600;
+  color: #333;
+  font-size: 15px;
+}
+
+#newTourForm input,
+#newTourForm textarea {
+  padding: 10px 12px;
+  font-size: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#newTourForm input:focus,
+#newTourForm textarea:focus {
+  border-color: $primary-color;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+  outline: none;
+}
+
+#newTourForm button {
+  margin-top: 15px;
+  padding: 12px;
+  background-color: $button-color;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#newTourForm button:hover {
+  background-color: $accent-color;
+}
+
+.error-message {
+  color: $warn-color;
+  font-size: 0.85em;
+  margin-top: -6px;
+  margin-bottom: 6px;
+}
+
+input.invalid, textarea.invalid {
+    border: 1px solid red;
+}
+.error-message {
+    color: red;
+    font-size: 0.8rem;
+}

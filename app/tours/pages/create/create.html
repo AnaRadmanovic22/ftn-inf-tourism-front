@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Add New Tour</title>
+        <link rel="stylesheet" href="/dist/tours/pages/create/create.css"/>
+        <script type="module" src="/dist/tours/pages/create/create.js"></script>
+    </head>
+    <body>
+         <nav class="navbar">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="../../../index.html">Home</a></li>
+                <li class="nav-item" id="login"><a href="login.html">Login</a></li>
+                <li class="nav-item" id="logout"><a href="../../../index.html">Logout</a></li>
+            </ul>
+        </nav>
+        <div id="form"> 
+            <form id="newTourForm" novalidate>
+                <h3>Add New Tour</h3>
+                <label for="name">Tour name:</label>
+                <input type="text" id="name" name="name" placeholder="Tour name" required />
+                <span id="nameError" class="error-message"></span>
+
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="5" placeholder="Description"></textarea>
+                <span id="descriptionError" class="error-message"></span>
+
+                <label for="dateTime">Date and time of tour:</label>
+                <input type="datetime-local" id="dateTime" name="dateTime" required />
+                <span id="dateTimeError" class="error-message"></span>
+
+                <label for="maxGuests">Max number of tourists:</label>
+                <input type="number" id="maxGuests" name="maxGuests" placeholder="Max number of tourists" min="1" />
+                <span id="maxGuestsError" class="error-message"></span>
+
+                <button type="submit" id="submitBtn">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>
+

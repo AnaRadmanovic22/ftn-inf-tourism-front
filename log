@@ -1,0 +1,87 @@
+[33mcommit eb8369aaf0fe1a0985a33aa4e260e1a01179b892[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdevelop[m[33m, [m[1;31morigin/develop[m[33m)[m
+Merge: 45a265b 9bcd7b9
+Author: AnaRadmanovic22 <anaradmanovic21@gmail.com>
+Date:   Fri Jul 11 16:36:38 2025 +0200
+
+    Merge branch 'master' into develop
+
+[33mcommit 45a265b869f8f5e8e8eef2fc362ae2e2f6c1a26d[m
+Author: AnaRadmanovic22 <anaradmanovic21@gmail.com>
+Date:   Fri Jul 11 15:59:36 2025 +0200
+
+    Dodata logika za validaciju unosa u formu i eksportovana funkcija za proveru login statusa
+
+[33mcommit c7672e5b01b58b6a1f6be3af45fab0226c265069[m
+Author: AnaRadmanovic22 <anaradmanovic21@gmail.com>
+Date:   Thu Jul 10 19:44:57 2025 +0200
+
+    Edit i delete dugme-greska
+
+[33mcommit df249a576530ef2b63f112de36ada8a6ead37278[m
+Author: AnaRadmanovic22 <anaradmanovic21@gmail.com>
+Date:   Thu Jul 10 13:16:07 2025 +0200
+
+    Implementirana funkcionalnost za dodavanje nove ture
+
+[33mcommit 6de9758ac91c4abb9b7dca808db9742cdfd9bf13[m
+Author: AnaRadmanovic22 <anaradmanovic21@gmail.com>
+Date:   Tue Jul 8 23:20:06 2025 +0200
+
+    Implementirana logika za dobavljanje svih tura ulogovanog korisnika
+
+[33mcommit 6553624f172df30c989b0b3f676fff2df9868aa1[m
+Author: AnaRadmanovic22 <anaradmanovic21@gmail.com>
+Date:   Tue Jul 8 17:27:27 2025 +0200
+
+    fix
+
+[33mcommit 9bcd7b9c79b25ea7baabf03f93c28e7fafeeb468[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Merge: 052a45a 9da3313
+Author: Ana Manojlovic <anaradmanovic21@gmail.com>
+Date:   Tue Jul 8 17:24:38 2025 +0200
+
+    Merge pull request #1 from AnaRadmanovic22/b1.1-restorani
+    
+    Pull Request – Dodavanje funkcionalnosti za restorane
+
+[33mcommit 57575ebd3763e6970c4d36c3784c4a902fca3788[m
+Author: AnaRadmanovic22 <anaradmanovic21@gmail.com>
+Date:   Tue Jul 8 16:19:01 2025 +0200
+
+    Implementirana funkcionalnost za prikaz tura ulogovanog korisnika
+
+[33mcommit 1459ffe57cb5ba54f02cbef552de06fdc6b49bed[m[33m ([m[1;32mfeature/create-tour-form[m[33m)[m
+Author: AnaRadmanovic22 <anaradmanovic21@gmail.com>
+Date:   Mon Jul 7 23:03:52 2025 +0200
+
+    Implementirana stranica za dodavanje nove ture i vezane funkcionalnosti.
+
+[33mcommit 0d0ebfda91bcf2636a30cc3ec99deb0c8c634036[m
+Author: AnaRadmanovic22 <anaradmanovic21@gmail.com>
+Date:   Mon Jul 7 21:03:00 2025 +0200
+
+    Implementiran TourService sa podrškom za create, get, update i delete
+
+[33mcommit 9da3313127f9fbac23c73ec609974321268a39cd[m[33m ([m[1;31morigin/b1.1-restorani[m[33m)[m
+Author: Branko Kovacevic <branko.kovacevic09@gmail.com>
+Date:   Sun Jul 6 19:07:06 2025 +0200
+
+    konacan commit: omogucena funkcionalnost za brisanje i izmenu postojecih restorana odredjenog autora, dodata mogucnost dodavanja restorana samo kada si ulogovan, dodata funkcionalnost da pritiskom na dugme izmeni odlazi sena formu koja je ista kao forma za dodavanje ali sada sa formom za izmenu, ubaceni alertovi, ubaceni stilovi za navbar itd.
+
+[33mcommit 6fc9e41e50eae3f2750b18460d9500e0d725f4e6[m
+Author: Branko Kovacevic <branko.kovacevic09@gmail.com>
+Date:   Fri Jul 4 17:31:25 2025 +0200
+
+    kreirana stranica za prikaz restorana koje pripadaju autoru, kao i funckionalnost da se odlaskom na login stranicu kod klika na dugme submit sa odredjenim kredincijalima dodje na stranicu gde se prikazuju restorani tog autora; dodati su i stilovi za nav bar na stranici sa restoranima kao i stilovi za tabelu za prikaz restorana
+
+[33mcommit 1cbae0b20b1bef239b7a7f8eb69bd8c92e983e83[m
+Author: Branko Kovacevic <branko.kovacevic09@gmail.com>
+Date:   Thu Jul 3 16:34:23 2025 +0200
+
+    Implementacija B,1 funckionalnosti - struktura projekta ispostovana , postoje servis i model datoteke; kreiranje novog entiteta implementirano;prikaz samo entiteta datog autora implementiran; izmena i brisanje postojecih restorana implementiran......nastavak koji trebao biti na novoj grani svakako ali je sad sve tu ......kreiranje stranice sa formom za dodavanje novog restorana implementirano
+
+[33mcommit 052a45a990abb84766c6be70bfd5db35e7e52a84[m
+Author: lukaDoric <luka.doric@uns.ac.rs>
+Date:   Wed Mar 12 17:45:39 2025 +0100
+
+    project init.
