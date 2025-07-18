@@ -24,7 +24,10 @@ function renderMeals(meals: Meal[]) {
           alert("Jelo obrisano.");
           loadMeals(meal.restaurantId);
         })
+        .catch(() => alert("Greska prilikom brisanja jela."));
+=======
         .catch(() => alert("Greška prilikom brisanja jela."));
+
     });
   });
 }
@@ -32,6 +35,8 @@ export function loadMeals(restaurantId: number) {
   mealService
     .getByRestaurant(restaurantId)
     .then(renderMeals)
+    .catch(() => alert("Greska prilikom učitavanja jela."));
+=======
     .catch(() => alert("Greška prilikom učitavanja jela."));
 }
 export function setupAddMeal(restaurantId: number) {
@@ -77,6 +82,8 @@ export function setupAddMeal(restaurantId: number) {
         formContainer.style.display = "none";
         loadMeals(restaurantId);
       })
+      .catch(() => alert("Greska prilikom dodavanja jela."));
+=======
       .catch(() => alert("Greška prilikom dodavanja jela."));
   });
 }
