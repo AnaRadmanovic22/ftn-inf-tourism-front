@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Add New Tour</title>
         <link rel="stylesheet" href="/dist/tours/pages/create/create.css"/>
-        <script type="module" src="/dist/tours/pages/create/create.js"></script>
     </head>
     <body>
          <nav class="navbar">
@@ -15,8 +14,12 @@
                 <li class="nav-item" id="logout"><a href="../../../index.html">Logout</a></li>
             </ul>
         </nav>
-        <div id="form"> 
+        <div id="step1"> 
             <form id="newTourForm" novalidate>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 33%"></div> 
+                </div>
+
                 <h3>Add New Tour</h3>
                 <label for="name">Tour name:</label>
                 <input type="text" id="name" name="name" placeholder="Tour name" required />
@@ -34,9 +37,60 @@
                 <input type="number" id="maxGuests" name="maxGuests" placeholder="Max number of tourists" min="1" />
                 <span id="maxGuestsError" class="error-message"></span>
 
-                <button type="submit" id="submitBtn">Submit</button>
+                
+                <div class="button-group">
+                    <button type="submit" id="submitBtn">Save draft</button>
+                    <button id="nextBtn" type="button">Next</button>
+                </div>
             </form>
         </div>
+        <div id="step2" style="display: none">
+            <div class="progress-bar">
+                <div class="progress" style="width: 66%"></div> 
+            </div>
+            <div class="wrapper">
+                <form id="keypoint-form">
+                    <h3>Add key-point</h3>
+
+                    <p id="keypoint-warning" style="color: red; display: none;">
+                        You must add at least 2 key-points to continue!
+                    </p>
+
+                    <input type="text" id="keypoint-title" placeholder="Key-point name" required>
+                    <textarea id="keypoint-description" placeholder="Key-point description" required></textarea>
+                    <input type="text" id="keypoint-image" placeholder="Image URL" required>
+                    <input type="number" id="keypoint-lat" placeholder="Latitude" required>
+                    <input type="number" id="keypoint-lng" placeholder="Longitude" required>
+
+                    <button type="submit">Add key-point</button>
+                </form>
+
+                <div id="createdKP">
+                    <h3>Created key-points</h3>
+                    <ul id="keypoint-list" class="accordion-list"></ul>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button id="prevToStep1">Previous</button>
+                <button id="toPreview" disabled>Next</button>
+            </div>
+        </div>
+
+        <div id="step3" style="display: none;">
+            <div class="wrapper">
+                <div class="progress-bar">
+                    <div class="progress" style="width: 100%"></div> 
+                </div>
+                <h3>Preview tour</h3>
+                <div id="previewContainer"></div>
+                <div class="button-group">
+                    <button id="prevToStep2">Previous</button>
+                    <button id="submitAll">Publish</button>
+                </div>
+            </div>
+        </div>
+        <script type="module" src="/dist/tours/pages/create/create.js"></script>
     </body>
 </html>
 
