@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tours</title>
+    <link rel="stylesheet" href="/dist/tours/pages/user-interface/main-page/user.css" />
+  </head>
+  <body>
+    <header class="navbar">
+        <button class="logo-btn">Tours</button>
+        <nav class="nav-links">
+            <a href="#">Community</a>
+            <a href="#">Resources</a>
+            <a href="#">Contact</a>
+            <button class="sign-in">Sign in</button>
+            <button class="register">Register</button>
+        </nav>
+    </header>
+
+    <main class="main-layout">
+        <aside class="sidebar">
+            <label for="sortDropdown">Sort by:</label>
+            <select id="sortDropdown">
+                <option value="Name">Name</option>
+                <option value="DateTime">Date</option>
+                <option value="MaxGuests">Max Guests</option>
+            </select>
+
+            <label for="orderDropdown">Order:</label>
+            <select id="orderDropdown">
+                <option value="ASC">Ascending</option>
+                <option value="DESC">Descending</option>
+            </select>
+        </aside>
+
+    <section class="content">
+        <div class="top-bar">
+            <label for="pageSize">Tours per page:</label>
+            <select id="pageSize">
+                <option value="5" selected>5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="25">25</option>
+            </select>
+        </div>
+
+        <div class="card-grid"></div>
+        <div class="pagination"> 
+                <button id="prevPage" disabled>Previous</button>
+                <div id="pageCount"></div>
+                <button id="nextPage">Next</button>
+        </div>
+    </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-column">
+            <p><strong>Info</strong></p>
+            <p>Button allows users to share tour or see preview.</p>
+        </div>
+        <div class="footer-column">
+            <p><strong>Explore</strong></p>
+            <p>Design, Prototyping, ...</p>
+        </div>
+        <div class="footer-column">
+            <p><strong>Resources</strong></p>
+            <p>Blog, Support, etc.</p>
+        </div>
+    </footer>
+    <script  type="module" src="/dist/tours/pages/user-interface/main-page/user.js"></script>
+  </body>
+</html>
