@@ -24,3 +24,10 @@ export type KeyPoint = {
   longitude: number;
   tourId: number;
 };
+
+export interface Reservation{
+  id?: number;
+  tourId: number;
+  userId: number;
+  numberOfPeople: number;
+}
