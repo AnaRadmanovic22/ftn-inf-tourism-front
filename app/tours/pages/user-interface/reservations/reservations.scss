@@ -1,0 +1,114 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+
+  .nav-links {
+    display: flex;
+    gap: 1rem;
+
+    a,
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .sign-in {
+      color: #007bff;
+    }
+
+    .register {
+      background: black;
+      color: white;
+      padding: 5px 12px;
+      border-radius: 6px;
+    }
+  }
+}
+
+.main-layout {
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  .top{
+    height: 250px;
+    border-bottom:1px solid #ddd;
+    align-content: center;
+    text-align: center;
+  }
+  .reservations{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    
+    .reservation-card{
+      border: 1px solid gainsboro;
+      border-radius: 10px;
+      width: 700px;
+      margin: 10px;
+      padding-bottom: 10px;
+
+      .top-card{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0px 25px;
+
+        #date{
+          background-color:#ddd;
+          color:#007bff;
+          padding: 5px;
+          border-radius: 10px;
+        }
+      }
+
+      #numOfPeople{
+        margin: 0px 0px 10px 25px;
+      }
+
+      button{
+        margin: 10px 5px 10px 25px;
+        background-color: #ddd(245, 9, 9, 0.815);
+        border:1px solid #ddd;
+        border-radius: 10px;
+        color: gray;
+        padding: 7px 15px;
+        font-weight: 600;
+        cursor: pointer;
+        &:hover{
+          background-color: #ddd;
+        }
+      }
+    }
+  }
+}
+
+
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  padding: 2rem;
+  border-top: 1px solid #ddd;
+
+  .footer-column {
+    max-width: 300px;
+
+    p {
+      margin: 5px 0;
+    }
+  }
+}
