@@ -13,7 +13,7 @@ export class ReservationService {
     private apiUrl: string;
 
     constructor() {
-        this.apiUrl = "http://localhost:48696/api/reservations";
+        this.apiUrl = "http://localhost:5105/api/reservations";
     }
 
     getByTourId(tourId: number): Promise<Reservation[]> {
@@ -70,5 +70,11 @@ export class ReservationService {
             });
         }
         console.log("Reservation deleted successfully.");
-    })}
+         return;
+        })
+        .catch(error => {
+            console.error("Error deleting reservation:", error.message);
+            throw error;
+         });
+    }
 }
