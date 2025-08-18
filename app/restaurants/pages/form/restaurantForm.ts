@@ -122,7 +122,7 @@ function handlePublish(id: number): void {
         console.log("Šaljem ovaj restoran za update:", updatedRestaurant);
 
         return restaurantService.update(updatedRestaurant).then((res) => {
-          console.log("✅ Backend vratio nakon update:", res);
+          console.log(" Backend vratio nakon update:", res);
           alert("Restoran je uspesno objavljen!");
           window.location.href = "../list/myRestaurant.html";
         });

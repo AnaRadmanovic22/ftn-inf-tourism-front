@@ -86,30 +86,5 @@ h1 {
     }
   }
 
-.navbar {
-  background-color: #007bff;
-  padding: 10px;
-
-  .nav-list {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-
-    .nav-item {
-      margin: 0 15px;
-
-      a {
-        color: white;
-        text-decoration: none;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-}
 
 

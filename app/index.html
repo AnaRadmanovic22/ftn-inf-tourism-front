@@ -16,10 +16,19 @@
             <li class="nav-item"><a href="index.html">Home</a></li>
             <li class="nav-item" id="login"><a href="users/pages/login/login.html">Login</a></li>
             <li class="nav-item" id="logout"><a href="index.html">Logout</a></li>
-            <li class="nav-item" id="restorani"><a href="restaurants/pages/restaurantList/restaurantList.html">Restorani</a>
+            <li class="nav-item" id="restorani"><a href="restaurants/pages/restaurantList/restaurantList.html">Restorani</a></li>
+            <li class="nav-item" id="my-res" style="display:none">
+  <a href="restaurants/pages/my/myReservations.html">Moje rezervacije</a>
 </li>
-
         </ul>
     </nav>
+    <script>
+  (function () {
+    var isLoggedIn = !!localStorage.getItem("username");
+    var my = document.getElementById("my-res");
+    if (my) my.style.display = isLoggedIn ? "block" : "none";
+  })();
+</script>
+
 </body>
 </html>

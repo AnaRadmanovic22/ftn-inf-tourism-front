@@ -1,0 +1,184 @@
+@import "../../../styles/global.scss";
+
+/* Hero */
+.page-hero {
+  background: radial-gradient(1200px 400px at 10% -30%, rgba(255, 160, 122, .25), transparent 60%),
+              radial-gradient(1000px 380px at 90% -40%, rgba(100, 149, 237, .25), transparent 60%),
+              linear-gradient(180deg, #fafafa, #fff);
+  border-bottom: 1px solid #eee;
+}
+.page-hero .hero-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 16px 32px;
+}
+.hero-kicker {
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+.page-hero h1 {
+  margin: 0 0 8px;
+  font-size: 32px;
+  line-height: 1.2;
+  color: #111827;
+}
+.page-hero p {
+  margin: 0;
+  color: #374151;
+}
+.hero-stats {
+  display: flex;
+  gap: 24px;
+  margin-top: 18px;
+}
+.stat {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 12px 16px;
+}
+.stat-value {
+  display: block;
+  font-weight: 700;
+  font-size: 20px;
+  color: #111827;
+}
+.stat-label {
+  display: block;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* Container/toolbar */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+}
+.toolbar {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.search-wrap input[type="search"] {
+  width: 280px;
+  max-width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  outline: none;
+}
+.search-wrap input[type="search"]:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99,102,241,.15);
+}
+.legend {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Tags */
+.tag {
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: #f3f4f6;
+  color: #374151;
+}
+.tag-breakfast { border-color: #fde68a; background: #fffbeb; }
+.tag-lunch     { border-color: #a7f3d0; background: #ecfdf5; }
+.tag-dinner    { border-color: #c7d2fe; background: #eef2ff; }
+
+/* Alerts */
+.alert { min-height: 20px; margin-bottom: 12px; }
+.alert.success { color: #065f46; }
+.alert.error   { color: #b91c1c; }
+
+/* Cards grid */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 12px;
+}
+.reservation-card {
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding: 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+  transition: box-shadow .15s ease, transform .08s ease;
+}
+.reservation-card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,.06);
+  transform: translateY(-1px);
+}
+.reservation-card .row {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.reservation-card .row div b {
+  color: #111827;
+}
+.reservation-card .row div {
+  color: #374151;
+  font-size: 14px;
+}
+.actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Buttons */
+.btn-cancel {
+  appearance: none;
+  border: 1px solid #ef4444;
+  color: #b91c1c;
+  background: #fff;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease, border-color .15s ease, transform .06s ease;
+}
+.btn-cancel:hover {
+  background: #fee2e2;
+  border-color: #dc2626;
+  color: #991b1b;
+}
+.btn-cancel:active {
+  transform: translateY(1px);
+}
+
+/* Empty state */
+.cards:empty::after {
+  content: "Nemate rezervacije.";
+  display: block;
+  color: #6b7280;
+  padding: 16px;
+  border: 1px dashed #e5e7eb;
+  border-radius: 12px;
+  grid-column: span 12;
+}
+
+/* Responsive */
+@media (max-width: 920px) {
+  .reservation-card .row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .hero-stats { flex-direction: column; gap: 8px; }
+  .reservation-card { grid-template-columns: 1fr; }
+  .actions { justify-content: flex-start; }
+}

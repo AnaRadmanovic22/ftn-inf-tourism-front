@@ -14,8 +14,19 @@
     <ul class="nav-list">
       <li class="nav-item"><a href="../../../index.html">Home</a></li>
       <li class="nav-item" id="myRestaurants"><a href="../list/myRestaurant.html">Moji restorani</a></li>      <li class="nav-item" id="logout"><a href="../../../index.html">Logout</a></li>
+    <li class="nav-item" id="my-res" style="display:none">
+  <a href="../my/myReservations.html">Moje rezervacije</a>
+</li>
     </ul>
   </nav>
+
+  <script>
+  (function () {
+    var isLoggedIn = !!localStorage.getItem("username");
+    var my = document.getElementById("my-res");
+    if (my) my.style.display = isLoggedIn ? "block" : "none";
+  })();
+</script>
 
   <h1>Dodaj novi restoran</h1>
   

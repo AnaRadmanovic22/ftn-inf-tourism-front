@@ -10,13 +10,23 @@
 <body>
     <nav class="navbar">
         <div class="logo">
-        <a href="../../../index.html">Gastronomija</a>
+          <a href="../../../index.html">Gastronomija</a>
         </div>
         <ul class="nav-list">
             <li class="nav-item"><a href="../../../index.html">Početna</a></li>
+            <li class="nav-item" id="my-res" style="display:none">
+              <a href="../my/myReservations.html">Moje rezervacije</a>
+            </li>
             <li class="nav-item" class="login"><a href="../../../users/pages/login/login.html">Login</a></li> 
         </ul>
 </nav>
+<script>
+  (function () {
+    var isLoggedIn = !!localStorage.getItem("username");
+    var my = document.getElementById("my-res");
+    if (my) my.style.display = isLoggedIn ? "block" : "none";
+  })();
+</script>
     
   <div id="restaurantDetailsContainer">
     <div id="restaurantInfo"></div>

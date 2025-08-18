@@ -26,26 +26,23 @@ function handleLogin(event: Event) {
   userService
     .login(username, password)
     .then((user) => {
-
-            localStorage.setItem('userId', user.id.toString());
+      localStorage.setItem("userId", user.id.toString());
       localStorage.setItem("userId", user.id.toString());
       localStorage.setItem("username", user.username);
       localStorage.setItem("role", user.role);
-    
 
-            if (user.role === 'vodic') {
-                window.location.href = "../../../tours/pages/guide-tours/guide-tours.html";
-            }
-            else if (user.role === 'vlasnik'){
-               window.location.href =
-               "../../../restaurants/pages/list/myRestaurant.html";
-            }
-            else if(user.role === 'turista'){
-              window.location.href = "/app/tours/pages/user-interface/main-page/user.html";
-            }
-            else{
-                window.location.href = "../../../index.html";
-            }
+      if (user.role === "vodic") {
+        window.location.href =
+          "../../../tours/pages/guide-tours/guide-tours.html";
+      } else if (user.role === "vlasnik") {
+        window.location.href =
+          "../../../restaurants/pages/list/myRestaurant.html";
+      } else if (user.role === "turista") {
+        window.location.href =
+          "/app/tours/pages/user-interface/main-page/user.html";
+      } else {
+        window.location.href = "../../../index.html";
+      }
     })
     .catch((error) => {
       console.error("Login failed", error.message);
@@ -55,7 +52,10 @@ function handleLogin(event: Event) {
 function handleLogout() {
   localStorage.removeItem("username");
   localStorage.removeItem("role");
+  localStorage.removeItem("currentTouristId");
+  localStorage.removeItem("userId");
   setUserLoginState(false);
+  window.location.href = "../../../index.html";
 }
 
 function checkLoginStatus() {

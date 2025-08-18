@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="sr">
+<head>
+  <meta charset="utf-8" />
+  <title>Moje rezervacije</title>
+  <link rel="stylesheet" href="../../../../dist/restaurants/pages/my/myReservations.css" />
+</head>
+<body>
+<nav class="navbar">
+  <div class="logo"><a href="../../../index.html">Gastronomija</a></div>
+  <ul class="nav-list">
+    <li class="nav-item"><a href="../../../index.html">Home</a></li>
+    <li class="nav-item"><a href="../../../restaurants/pages/restaurantList/restaurantList.html">Restorani</a></li>
+    <li class="nav-item">
+      <a id="logout" href="#">Logout</a>
+    </li>
+</nav>
+
+<script>
+  (function () {
+    var isLoggedIn = !!localStorage.getItem("username");
+    var my = document.getElementById("my-res");
+    if (my) my.style.display = isLoggedIn ? "block" : "none";
+  })();
+</script>
+
+<header class="page-hero">
+  <div class="hero-content">
+    <div class="hero-kicker">Rezervacije</div>
+    <h1>Moje rezervacije</h1>
+    <p>Ovde vidiš sve aktivne rezervacije i možeš da ih otkažeš u skladu sa pravilima.</p>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-value" id="statCount">—</span>
+        <span class="stat-label">trenutno aktivnih</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">12h / 4h</span>
+        <span class="stat-label">pravila otkazivanja</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container reservations-container">
+  <div id="resMsg" class="alert" role="alert"></div>
+
+  <div class="toolbar">
+    <div class="search-wrap">
+      <input id="searchInput" type="search" placeholder="Pretraži po datumu ili obroku…" />
+    <button id="searchBtn" type="button">Pretraži</button>
+  <button id="resetBtn" type="button" title="Poništi filter">Reset</button>
+    </div>
+    <div class="legend">
+      <span class="tag tag-breakfast">Doručak</span>
+      <span class="tag tag-lunch">Ručak</span>
+      <span class="tag tag-dinner">Večera</span>
+    </div>
+  </div>
+
+  <div id="myReservations" class="cards"></div>
+</main>
+
+
+  <script type="module" src="../../../../dist/restaurants/pages/my/myReservations.js"></script>
+</body>
+</html>
