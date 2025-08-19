@@ -1,4 +1,4 @@
-import { Restaurant } from "../models/restaurant.model";
+import { Restaurant, RestaurantPagedResult } from "../models/restaurant.model";
 
 const API_URL = "http://localhost:5105/api/restaurants";
 
@@ -85,5 +85,28 @@ export class RestaurantService {
         console.error("Greska u getById:", error);
         throw error;
       });
+  }
+
+  getPaged(
+    page: number = 1,
+    pageSize: number = 10,
+    orderBy: string = "Name",
+    orderDirection: string = "ASC"
+  ): Promise<RestaurantPagedResult> {
+    const queryParams = new URLSearchParams({
+      page: page.toString(),
+      pageSize: pageSize.toString(),
+      orderBy,
+      orderDirection,
+    });
+
+    const url = `${API_URL}?${queryParams.toString()}`;
+
+    return fetch(url).then((response) => {
+      if (!response.ok) {
+        throw new Error("Greska prilikom učitavanja restorana.");
+      }
+      return response.json();
+    });
   }
 }

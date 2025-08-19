@@ -12,3 +12,8 @@ export interface Restaurant {
   ownerId: number;
   meals?: Meal[];
 }
+export interface RestaurantPagedResult {
+  data: Restaurant[];
+  totalCount: number;
+=======
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prikaz restorana</title>
+    <link rel="stylesheet" href="../../../../dist/restaurants/pages/restaurantList/restaurantList.css" />
+
+</head>
+<body>
+<nav class="navbar">
+    <div class="logo">
+        <a href="../../../index.html">Gastronomija</a>
+        </div>
+  <ul class="nav-list">
+    <li class="nav-item"><a href="../../../index.html">Početna</a></li>
+    <li class="nav-item" id="login"><a href="../../../users/pages/login/login.html">Login</a></li> 
+</ul>
+</nav>
+    <h1>Restorani</h1>
+
+<label for="sortDropdown">Sortiraj po:</label>
+<select id="sortDropdown">
+  <option value="Name">Naziv</option>
+  <option value="Capacity">Kapacitet</option>
+</select>
+
+<label for="orderDropdown">Rast/Opad:</label>
+<select id="orderDropdown">
+  <option value="ASC">Rastuće</option>
+  <option value="DESC">Opadajuce</option>
+</select>
+
+<label for="pageSize">Po stranici:</label>
+<select id="pageSize">
+  <option value="5">5</option>
+  <option value="10" selected>10</option>
+  <option value="20">20</option>
+</select>
+
+
+<div id="restaurantContainer"></div>
+
+
+<div>
+  <button id="prevPage">Prethodna</button>
+  <button id="nextPage">Sledeca</button>
+</div>
+
+  <script type="module" src="../../../../dist/restaurants/pages/restaurantList/restaurantList.js"></script>
+
+</body>
+</html>
+

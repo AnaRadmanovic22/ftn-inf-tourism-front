@@ -38,14 +38,26 @@ button {
 }
 
 .navbar {
-    background-color: $primary-color;
     padding: 10px;
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0f172a;
+  color: white;
+
+   .logo a {
+    color: #fbbf24;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  }
 
     .nav-list {
         list-style: none;
         margin: 0;
         padding: 0;
         display: flex;
+        gap: 1.5rem;
     }
 
     .nav-item {
@@ -53,7 +65,10 @@ button {
 
         a {
             color: white;
-            font-weight: bold;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 6px 12px;
+            border-radius: 6px;
         }
     }
 
@@ -64,5 +79,8 @@ button {
     #logout {
         margin-left: auto;
     }
-    
+
+    #restorani {
+        margin-left: auto;
+    }
 }

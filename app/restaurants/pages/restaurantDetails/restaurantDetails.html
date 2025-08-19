@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalji restorana</title>
+    <link rel="stylesheet" href="../../../../dist/restaurants/pages/restaurantDetails/restaurantDetails.css" />
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+        <a href="../../../index.html">Gastronomija</a>
+        </div>
+        <ul class="nav-list">
+            <li class="nav-item"><a href="../../../index.html">Početna</a></li>
+            <li class="nav-item" class="login"><a href="../../../users/pages/login/login.html">Login</a></li> 
+        </ul>
+</nav>
+    
+  <div id="restaurantDetailsContainer">
+    <div id="restaurantInfo"></div>
+  </div>
+
+
+  <button id="openReservationFormBtn">Rezervisi mesto</button>
+
+  <div id="reservationForm" style="display:none; margin-top: 16px;">
+    <h3>Rezervisi mesto</h3>
+    <form id="makeReservationForm">
+        <label for="reservationDate">Datum:</label>
+        <input type="date" id="reservationDate" name="reservationDate" required /><br/>
+        
+        <label for="mealType">Obrok:</label>
+        <select id="mealType" name="mealType" required>
+            <option value="Breakfast">Dorucak (8:00)</option>
+            <option value="Lunch">Rucak (13:00)</option>
+            <option value="Dinner">Vecera (18:00)</option>
+        </select><br/>
+
+        <label for="numberOfGuests">Broj osoba:</label>
+        <input type="number" id="numberOfGuests" name="numberOfGuests" min="1" required /><br/>
+
+        <button type="submit">Potvrdi rezervaciju</button>
+        <button type="button" id="closeReservationFormBtn">Otkazi</button>
+    </form>
+    <div id="reservationFormMsg"></div>
+</div>
+
+  <script type="module" src="../../../../dist/restaurants/pages/restaurantDetails/restaurantDetails.js"></script>
+
+</body>
+</html>
